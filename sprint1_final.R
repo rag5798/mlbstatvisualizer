@@ -95,12 +95,14 @@ batting_links <- function(links){
   new_position <- new_page %>% html_nodes(".position-28TbwVOg") %>% html_text()
   new_team <- new_page %>% html_nodes(".align-left-3L2SU-Mk") %>% html_text() %>% .[-1]
   new_stats <- new_page %>% html_nodes(".bui-table td") %>% html_text()
+
   for (x in seq_along(new_stats)) {
     if (new_stats[x] %in% new_team) {
       new_stats[x] <- NA
     }
   }
   new_stats <- na.omit(new_stats)
+  
   new_batting_stats <- data.frame(
     G = new_stats[seq(1, length(new_stats), by = 16)],
     AB = new_stats[seq(2, length(new_stats), by = 16)],
@@ -120,6 +122,7 @@ batting_links <- function(links){
     OPS = new_stats[seq(16, length(new_stats), by = 16)],
     stringsAsFactors = FALSE
   )
+  
   new_player <- data.frame(new_full_name, new_position, new_team, stringsAsFactors = FALSE)
   new_full_table <- cbind(new_player, new_batting_stats)
   return(new_full_table)
