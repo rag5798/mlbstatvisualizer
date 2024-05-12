@@ -6,7 +6,7 @@ This project aims to scrape the mlb website, mlb.com/stats, and give a visualzat
 This project uses the data that I get from mlb.com/stats to create a graph to help visualize the teams with the top batters and pitcher.
 
 I wrote this to see what teams are currently doing well in pitching and batting. I can see who is doing well so that I could predicte the outcome of a game. (Currently this project does not predict the out come of a game. I do this based on the graph that I see)
-{Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running and a walkthrough of the code. Focus should be on sharing what you learned about the language syntax.}
+
 
 [Software Demo Video](http://youtube.link.goes.here)
 
@@ -17,10 +17,11 @@ I was able to use Rstudio and visual studio as my IDE and github to hold my code
 I was able to get familar with tidyverse using things like the %>% to pipe things into other functions and ggplot, a library in tidyverse, to graph the data.
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
-
-- [Web Site Name](http://url.link.goes.here)
-- [Web Site Name](http://url.link.goes.here)
+- [Web Site Name](https://www.w3schools.com/r/default.asp)
+- [Web Site Name](https://www.youtube.com/watch?v=Dh7P5ExsYCg&ab_channel=RProgramming101)
+- [Web Site Name](https://www.youtube.com/watch?v=o42TI-N4qK8&t=426s&ab_channel=RProgramming101)
+- [Web Site Name](https://www.youtube.com/watch?v=WeuAiqWlcu0&ab_channel=Dataslice)
+- [Web Site Name](https://www.youtube.com/watch?v=E3pFBp5oPU8&ab_channel=Dataslice)
 
 # Future Work
 
