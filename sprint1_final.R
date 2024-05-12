@@ -41,8 +41,8 @@ batting_stats <- data.frame(
   AB = stats[seq(2, length(stats), by = 16)],
   Run = stats[seq(3, length(stats), by = 16)],
   Hits = stats[seq(4, length(stats), by = 16)],
-  `2B` = stats[seq(5, length(stats), by = 16)],
-  `3B` = stats[seq(6, length(stats), by = 16)],
+  "2B" = stats[seq(5, length(stats), by = 16)],
+  "3B" = stats[seq(6, length(stats), by = 16)],
   HR = stats[seq(7, length(stats), by = 16)],
   RBI = stats[seq(8, length(stats), by = 16)],
   BB = stats[seq(9, length(stats), by = 16)],
@@ -127,8 +127,8 @@ batting_links <- function(links){
     AB = new_stats[seq(2, length(new_stats), by = 16)],
     Run = new_stats[seq(3, length(new_stats), by = 16)],
     Hits = new_stats[seq(4, length(new_stats), by = 16)],
-    `2B` = new_stats[seq(5, length(new_stats), by = 16)],
-    `3B` = new_stats[seq(6, length(new_stats), by = 16)],
+    "2B" = new_stats[seq(5, length(new_stats), by = 16)],
+    "3B" = new_stats[seq(6, length(new_stats), by = 16)],
     HR = new_stats[seq(7, length(new_stats), by = 16)],
     RBI = new_stats[seq(8, length(new_stats), by = 16)],
     BB = new_stats[seq(9, length(new_stats), by = 16)],
@@ -191,7 +191,7 @@ links <- links[-1:-3]
 #links
 #View(full_table)
 
-#This 
+
 for (x in links) {
   new_full_table <- batting_links(x)
   names(new_full_table) <- names(full_table)
