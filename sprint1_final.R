@@ -67,6 +67,9 @@ player <- data.frame(full_name, position, team, stringsAsFactors = FALSE)
 #This puts the player names, team, and position with the respective stats
 #One thing to not is that the rows have to match in a cbind()
 full_table <- cbind(player, batting_stats)
+
+full_table$team <- factor(full_table$team, levels = c("AZ", "ATL", "BAL", "BOS", "CHC", "CWS", "CIN", "CLE", "COL", "DET", "HOU", "KC", "LAA", "LAD", "MIA", "MIL", "MIN", "NYY", "NYM", "OAK", "PHI", "PIT", "SD", "SEA", "SF", "STL", "TB", "TEX", "TOR", "WSH"),
+                              labels = c("Arizona Diamondbacks", "Atlanta Braves", "Baltimore Orioles", "Boston Red Sox", "Chicago Cubs", "Chicago White Sox", "Cincinnati Reds", "Cleveland Guardians", "Colorado Rockies", "Detroit Tigers", "Houston Astros", "Kansas City Royals", "Los Angeles Angels", "Los Angeles Dodgers", "Miami Marlins", "Milwaukee Brewers", "Minnesota Twins", "New York Yankees", "New York Mets", "Oakland Athletics", "Philadelphia Phillies", "Pittsburgh Pirates", "San Diego Padres", "Seattle Mariners", "San Francisco Giants", "St. Louis Cardinals", "Tampa Bay Rays", "Texas Rangers", "Toronto Blue Jays", "Washington Nationals"))
 #View(full_table)
 
 #This section is similar to the batting section where it gets the data
@@ -105,6 +108,9 @@ pitching_players <- data.frame(
   WHIP = pitching_stats[seq(19, length(pitching_stats), by = 20)],
   AVG = pitching_stats[seq(20, length(pitching_stats), by = 20)]
 )
+
+pitching_players$Team <- factor(pitching_players$Team, levels = c("AZ", "ATL", "BAL", "BOS", "CHC", "CWS", "CIN", "CLE", "COL", "DET", "HOU", "KC", "LAA", "LAD", "MIA", "MIL", "MIN", "NYY", "NYM", "OAK", "PHI", "PIT", "SD", "SEA", "SF", "STL", "TB", "TEX", "TOR", "WSH"),
+                          labels = c("Arizona Diamondbacks", "Atlanta Braves", "Baltimore Orioles", "Boston Red Sox", "Chicago Cubs", "Chicago White Sox", "Cincinnati Reds", "Cleveland Guardians", "Colorado Rockies", "Detroit Tigers", "Houston Astros", "Kansas City Royals", "Los Angeles Angels", "Los Angeles Dodgers", "Miami Marlins", "Milwaukee Brewers", "Minnesota Twins", "New York Yankees", "New York Mets", "Oakland Athletics", "Philadelphia Phillies", "Pittsburgh Pirates", "San Diego Padres", "Seattle Mariners", "San Francisco Giants", "St. Louis Cardinals", "Tampa Bay Rays", "Texas Rangers", "Toronto Blue Jays", "Washington Nationals"))
 #View(pitching_players)
 
 #This is how to create functions in R
@@ -141,9 +147,11 @@ batting_links <- function(links){
     OPS = new_stats[seq(16, length(new_stats), by = 16)],
     stringsAsFactors = FALSE
   )
-  new_player <- data.frame(new_full_name, new_position, new_team, stringsAsFactors = FALSE)
+  new_player <- data.frame(full_name = new_full_name, position = new_position, team = new_team, stringsAsFactors = FALSE)
   new_full_table <- cbind(new_player, new_batting_stats)
   #This returns a new table that can be set to a new variable also shown bellow
+  new_full_table$team <- factor(new_full_table$team, levels = c("AZ", "ATL", "BAL", "BOS", "CHC", "CWS", "CIN", "CLE", "COL", "DET", "HOU", "KC", "LAA", "LAD", "MIA", "MIL", "MIN", "NYY", "NYM", "OAK", "PHI", "PIT", "SD", "SEA", "SF", "STL", "TB", "TEX", "TOR", "WSH"),
+                            labels = c("Arizona Diamondbacks", "Atlanta Braves", "Baltimore Orioles", "Boston Red Sox", "Chicago Cubs", "Chicago White Sox", "Cincinnati Reds", "Cleveland Guardians", "Colorado Rockies", "Detroit Tigers", "Houston Astros", "Kansas City Royals", "Los Angeles Angels", "Los Angeles Dodgers", "Miami Marlins", "Milwaukee Brewers", "Minnesota Twins", "New York Yankees", "New York Mets", "Oakland Athletics", "Philadelphia Phillies", "Pittsburgh Pirates", "San Diego Padres", "Seattle Mariners", "San Francisco Giants", "St. Louis Cardinals", "Tampa Bay Rays", "Texas Rangers", "Toronto Blue Jays", "Washington Nationals"))
   return(new_full_table)
 }
 
@@ -182,6 +190,8 @@ pitching_stats <- function(links){
     WHIP = new_pitching_stats[seq(19, length(new_pitching_stats), by = 20)],
     AVG = new_pitching_stats[seq(20, length(new_pitching_stats), by = 20)]
   )
+  new_pitching_players$Team <- factor(new_pitching_players$Team, levels = c("AZ", "ATL", "BAL", "BOS", "CHC", "CWS", "CIN", "CLE", "COL", "DET", "HOU", "KC", "LAA", "LAD", "MIA", "MIL", "MIN", "NYY", "NYM", "OAK", "PHI", "PIT", "SD", "SEA", "SF", "STL", "TB", "TEX", "TOR", "WSH"),
+                                  labels = c("Arizona Diamondbacks", "Atlanta Braves", "Baltimore Orioles", "Boston Red Sox", "Chicago Cubs", "Chicago White Sox", "Cincinnati Reds", "Cleveland Guardians", "Colorado Rockies", "Detroit Tigers", "Houston Astros", "Kansas City Royals", "Los Angeles Angels", "Los Angeles Dodgers", "Miami Marlins", "Milwaukee Brewers", "Minnesota Twins", "New York Yankees", "New York Mets", "Oakland Athletics", "Philadelphia Phillies", "Pittsburgh Pirates", "San Diego Padres", "Seattle Mariners", "San Francisco Giants", "St. Louis Cardinals", "Tampa Bay Rays", "Texas Rangers", "Toronto Blue Jays", "Washington Nationals"))
   return(new_pitching_players)
 }
 
