@@ -8,7 +8,7 @@ This project uses the data that I get from mlb.com/stats to create a graph to he
 I wrote this to see what teams are currently doing well in pitching and batting. I can see who is doing well so that I could predicte the outcome of a game. (Currently this project does not predict the out come of a game. I do this based on the graph that I see)
 
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/1GeQBQMlRi4)
 
 # Development Environment
 
@@ -17,11 +17,11 @@ I was able to use Rstudio and visual studio as my IDE and github to hold my code
 I was able to get familar with tidyverse using things like the %>% to pipe things into other functions and ggplot, a library in tidyverse, to graph the data.
 # Useful Websites
 
-- [Web Site Name](https://www.w3schools.com/r/default.asp)
-- [Web Site Name](https://www.youtube.com/watch?v=Dh7P5ExsYCg&ab_channel=RProgramming101)
-- [Web Site Name](https://www.youtube.com/watch?v=o42TI-N4qK8&t=426s&ab_channel=RProgramming101)
-- [Web Site Name](https://www.youtube.com/watch?v=WeuAiqWlcu0&ab_channel=Dataslice)
-- [Web Site Name](https://www.youtube.com/watch?v=E3pFBp5oPU8&ab_channel=Dataslice)
+- [w3schools](https://www.w3schools.com/r/default.asp)
+- [RProgramming101 Youtube Channel](https://www.youtube.com/watch?v=Dh7P5ExsYCg&ab_channel=RProgramming101)
+- [RProgramming101 Youtube Channel](https://www.youtube.com/watch?v=o42TI-N4qK8&t=426s&ab_channel=RProgramming101)
+- [Dataslice Youtube Channel](https://www.youtube.com/watch?v=WeuAiqWlcu0&ab_channel=Dataslice)
+- [Dataslice Youtube Channel](https://www.youtube.com/watch?v=E3pFBp5oPU8&ab_channel=Dataslice)
 
 # Future Work
 
